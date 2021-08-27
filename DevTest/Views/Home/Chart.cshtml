@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewData["Title"] = "Chart";
+}
+@section Styles{
+    <link href="~/css/jquery.orgchart.css" media="all" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        #orgChart {
+            width: auto;
+            height: auto;
+        }
+
+        #orgChartContainer {
+            /*width: 1000px;*/
+            /*height: 500px;*/
+            overflow: auto;
+            background: #eeeeee;
+        }
+    </style>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+}
+
+@section Chart{
+    <h1 style="margin-top:150px;">jQuery orgChart Plugin Demo</h1>
+    <div id="TestDv">
+        <div id="orgChartContainer">
+            <div id="orgChart"></div>
+        </div>
+    </div>
+    <div id="img">
+    </div>
+    
+    <input type="button" value="완료" onclick="fn_Sucess();" />
+    <input type="button" value="이미지로 저장" onclick="fn_Save();" />
+    <input type="button" value="인쇄" onclick="javascript: window.print();" />
+}
+
+
+@section Scripts{
+    <script type="text/javascript" src="~/js/jquery.orgchart.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+    <script type="text/javascript">
+
+        var testData = [
+            { id: 1, name: "CEO", parent: 0 },
+            { id: 2, name: "경영기획총괄", parent: 1 },
+            { id: 3, name: "CS본부", parent: 1 },
+            { id: 4, name: "마케팅본부", parent: 1 },
+            { id: 6, name: "컨택솔루션본부", parent: 1 },
+            { id: 7, name: "DX추진팀", parent: 2 },
+            { id: 8, name: "재무회계팀", parent: 2 },
+            { id: 9, name: "전략기획팀", parent: 2 },
+            { id: 10, name: "인재경영팀", parent: 2 },
+            { id: 11, name: "경영지원팀", parent: 2 },
+            { id: 12, name: "신사업추진단", parent: 2 },
+            { id: 13, name: "IT정보보안TF", parent: 7 },
+            { id: 14, name: "노사협력TF", parent: 10 },
+            { id: 15, name: "신사업추진팀", parent: 12 },
+            { id: 16, name: "KTCS BDO", parent: 12 },
+            { id: 17, name: "CS 기획팀", parent: 3 },
+            { id: 18, name: "CS 마케팅팀", parent: 3 },
+            { id: 19, name: "CS 리텐션팀", parent: 3 },
+            { id: 20, name: "CS lab", parent: 17 },
+            { id: 21, name: "플랫폼 사업단", parent: 3 },
+            { id: 22, name: "플랫폼사업팀", parent: 21 },
+            { id: 23, name: "114팀", parent: 21 },
+            { id: 24, name: "리서치사업 TF", parent: 21 },
+            { id: 25, name: "마케팅기획팀", parent: 4 },
+            { id: 26, name: "MOT유통사업팀", parent: 4 },
+            { id: 27, name: "모바일유통사업팀", parent: 4 },
+            { id: 28, name: "대형유통사업팀", parent: 4 },
+            { id: 29, name: "마케팅지원TF", parent: 4 },
+            { id: 30, name: "전략유통사업단", parent: 4 },
+            { id: 31, name: "상품기획팀", parent: 30 },
+            { id: 32, name: "채털운영팀", parent: 30 },
+            { id: 33, name: "컨택솔루션기획팀", parent: 6 },
+            { id: 34, name: "컨택영업1팀", parent: 6 },
+            { id: 35, name: "컨택영업2팀", parent: 6 },
+            { id: 36, name: "컨택영업3팀", parent: 6 },
+            { id: 37, name: "AICC추진단", parent: 6 },
+            { id: 38, name: "컨택O&M단", parent: 6 },
+            { id: 39, name: "AICC 기획팀", parent: 37 },
+            { id: 40, name: "AICC 개발팀", parent: 37 },
+            { id: 41, name: "AICC 지원 TF", parent: 40 },
+            { id: 42, name: "컨택O&M1팀", parent: 38 },
+            { id: 43, name: "컨택O&M2팀", parent: 38 },
+            { id: 44, name: "교육컨설팅사업팀", parent: 38 },
+            { id: 45, name: "컨택O&M지원팀", parent: 38 },
+            { id: 46, name: "윤리경영실", parent: 1 },
+            { id: 47, name: "제안 TF", parent: 33 }
+        ];
+        $(function () {
+            org_chart = $('#orgChart').orgChart({
+                data: testData,
+                showControls: true,
+                allowEdit: true,
+                onAddNode: function (node) {
+                   // log('Created new node on node ' + node.data.id);
+                    org_chart.newNode(node.data.id);
+                    console.log(JSON.stringify(org_chart.getData()));
+                },
+                onDeleteNode: function (node) {
+                    log('Deleted node ' + node.data.id);
+                   // org_chart.deleteNode(node.data.id);
+                }
+
+            });
+        });
+
+        function PrintDiv(div) {
+            div = div[0]
+            html2canvas(div).then(function (canvas) {
+                var myImage = canvas.toDataURL();
+                downloadURI(myImage, "저장이미지이름.png")
+            });
+        }
+        function downloadURI(uri, name) {
+            var link = document.createElement("a")
+            link.download = name;
+            link.href = uri;
+            document.body.appendChild(link);
+            link.click();
+        }
+
+        function fn_Sucess() {
+            $(".org-add-button").hide().siblings(".org-del-button").hide();
+        }
+
+        function fn_Save() {
+            html2canvas($("#orgChartContainer").get(0)).then(function (canvas) {
+                document.getElementById('img').appendChild(canvas)
+            });
+        }
+    </script>
+}

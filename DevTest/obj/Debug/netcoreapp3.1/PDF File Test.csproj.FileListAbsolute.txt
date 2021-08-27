@@ -1,0 +1,39 @@
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.exe
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.deps.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.runtimeconfig.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.runtimeconfig.dev.json
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.dll
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.pdb
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.Views.dll
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\PDF File Test.Views.pdb
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.RazorAssemblyInfo.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.RazorAssemblyInfo.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.AssemblyInfoInputs.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.AssemblyInfo.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.TagHelpers.input.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.TagHelpers.output.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.RazorCoreGenerate.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.RazorTargetAssemblyInfo.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.RazorTargetAssemblyInfo.cs
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.Views.pdb
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\staticwebassets\PDF File Test.StaticWebAssets.Manifest.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\staticwebassets\PDF File Test.StaticWebAssets.xml
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.dll
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.pdb
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.genruntimeconfig.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.csproj.CopyComplete
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Projects\PDF File Test\PDF File Test\bin\Debug\netcoreapp3.1\itextsharp.dll
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.csproj.CoreCompileInputs.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.MvcApplicationPartsAssemblyInfo.cache
+C:\Projects\PDF File Test\PDF File Test\obj\Debug\netcoreapp3.1\PDF File Test.csprojAssemblyReference.cache
