@@ -65,8 +65,8 @@
         div.orgChart div.node {
             cursor: default;
             /*text-orientation: upright;
-            writing-mode: vertical-rl;*/
-            border: 1px solid #e7e7e7;
+            writing-mode: vertical-rl;
+            border: 1px solid #e7e7e7;*/
             display: inline-block;
             padding: 3px;
             width: 32px;
@@ -83,7 +83,7 @@
             -moz-border-radius: 4px;
             -webkit-border-radius: 4px;
             position: relative;
-            box-shadow: 1px 1px 0px #ddd;
+            /*box-shadow: 1px 1px 0px #ddd;*/
         }
 
     .org-add-button,
@@ -94,11 +94,12 @@
     }
 
     .org-add-button {
-        bottom: 3px;
-        left: 5px;
-        padding-left: 13px;
+        bottom: 7px;
+        width: 12px;
+        height: 15px;
         background: url(./add.png) no-repeat 0 3px;
     }
+
 
         .org-add-button:hover,
         .org-del-button:hover {
@@ -122,7 +123,6 @@
     .org-confirm-del-button {
         display: none;
     }
-
 }
 
 
@@ -191,8 +191,8 @@ div.orgChart {
     div.orgChart div.node {
         cursor: default;
         /*text-orientation: upright;
-        writing-mode: vertical-rl;*/
-        border: 1px solid #e7e7e7;
+        writing-mode: vertical-rl;
+        border: 1px solid #e7e7e7;*/
         display: inline-block;
         padding: 3px;
         width: 32px;
@@ -209,7 +209,7 @@ div.orgChart {
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         position: relative;
-        box-shadow: 1px 1px 0px #ddd;
+        /*box-shadow: 1px 1px 0px #ddd;*/
     }
 
 .org-add-button,
@@ -220,11 +220,14 @@ div.orgChart {
 }
 
 .org-add-button {
-    bottom: 3px;
-    left: 5px;
-    padding-left: 13px;
+    bottom: -14px;
+    left: 0px;
+    width: 12px;
+    height: 15px;
+    /* padding-left: 13px; */
     background: url(./add.png) no-repeat 0 3px;
 }
+
 
     .org-add-button:hover,
     .org-del-button:hover {
@@ -237,15 +240,15 @@ div.orgChart {
     background: url(./delete.png) no-repeat;
     width: 12px;
     height: 12px;
-    bottom: 7px;
-    right: 5px;
+    bottom: -14px;
+    right: 0px;
 }
 
 .org-input {
     width: 90px;
+    z-index: 99999;
 }
 
 .org-confirm-del-button {
     display: none;
 }
-

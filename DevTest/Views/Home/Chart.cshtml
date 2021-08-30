@@ -18,13 +18,13 @@
         }
     </style>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="//html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="//html2canvas.hertzen.com/dist/html2canvas.js"></script>
 
 }
 
 @section Chart{
-    <h1 style="margin-top:150px;">jQuery orgChart Plugin Demo</h1>
-    <div id="TestDv">
+    <h1 style="margin:50px;">jQuery orgChart Plugin Demo</h1>
+    <div id="TestDv" style="margin:20px;">
         <div id="orgChartContainer">
             <div id="orgChart"></div>
         </div>
@@ -102,8 +102,8 @@
                     console.log(JSON.stringify(org_chart.getData()));
                 },
                 onDeleteNode: function (node) {
-                    log('Deleted node ' + node.data.id);
-                   // org_chart.deleteNode(node.data.id);
+                    //log('Deleted node ' + node.data.id);
+                    org_chart.deleteNode(node.data.id);
                 }
 
             });
@@ -122,6 +122,8 @@
             link.href = uri;
             document.body.appendChild(link);
             link.click();
+            $(".org-add-button").show().siblings(".org-del-button").show();
+
         }
 
         function fn_Sucess() {
@@ -129,9 +131,25 @@
         }
 
         function fn_Save() {
-            html2canvas($("#orgChartContainer").get(0)).then(function (canvas) {
-                document.getElementById('img').appendChild(canvas)
-            });
+            $(".org-add-button").hide().siblings(".org-del-button").hide();
+
+            setTimeout(function () {
+                html2canvas($("#orgChartContainer").get(0)).then(function (canvas) {
+
+                    document.getElementById('img').appendChild(canvas);
+
+                    if (canvas.msToBlob) { //for IE 10, 11 
+                        var blob = canvas.msToBlob();
+                        window.navigator.msSaveBlob(blob, "capture.png");
+                        $(".org-add-button").show().siblings(".org-del-button").show();
+                    } else {
+                        PrintDiv($("#orgChartContainer"));
+                    }
+
+                });
+            }, 1000);
+           
+           
         }
     </script>
 }

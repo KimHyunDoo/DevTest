@@ -223,4 +223,3 @@ C:\Projects\DevTest\DevTest\obj\Debug\netcoreapp3.1\staticwebassets\DevTest.Stat
 C:\Projects\DevTest\DevTest\obj\Debug\netcoreapp3.1\DevTest.dll
 C:\Projects\DevTest\DevTest\obj\Debug\netcoreapp3.1\DevTest.pdb
 C:\Projects\DevTest\DevTest\obj\Debug\netcoreapp3.1\DevTest.genruntimeconfig.cache
-C:\Projects\DevTest\DevTest\obj\Debug\netcoreapp3.1\DevTest.csprojAssemblyReference.cache

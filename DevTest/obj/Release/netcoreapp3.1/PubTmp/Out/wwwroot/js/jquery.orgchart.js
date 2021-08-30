@@ -11,7 +11,7 @@
         onAddNode: null,
         onDeleteNode: null,
         onClickNode: null,
-        newNodeText: 'Add Child'
+        newNodeText: ''
     };
 
     function OrgChart($container, opts){
@@ -66,10 +66,10 @@
 
         this.startEdit = function(id){
             var inputElement = $('<input class="org-input" type="text" value="'+nodes[id].data.name+'"/>');
-            $container.find('div[node-id='+id+']').replaceWith(inputElement);
+            $container.find('div[node-id='+id+'] .DepsName').replaceWith(inputElement);
             var commitChange = function () {
 
-                var html = '<div>';
+                var html = '<div class="DepsName">';
 
                 for (var i = 0; i < nodes[id].data.name.length; i++) {
                     console.log(nodes[id].data.name.charAt(i));
@@ -224,7 +224,7 @@
             var nameString = '',
                 descString = '';
             if(typeof data.name !== 'undefined'){
-                nameString = '<div>';
+                nameString = '<div class="DepsName">';
 
                 for (var i = 0; i < self.data.name.length; i++) {
                     console.log(self.data.name.charAt(i));
