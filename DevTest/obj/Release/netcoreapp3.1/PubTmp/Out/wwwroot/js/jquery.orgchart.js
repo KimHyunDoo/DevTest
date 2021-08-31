@@ -5,7 +5,7 @@
     }
 
     $.fn.orgChart.defaults = {
-        data: [{id:1, name:'Root', parent: 0}],
+        data: [{ id: 1, name: 'Root', parent: 0, level:0}],
         showControls: false,
         allowEdit: false,
         onAddNode: null,
@@ -69,13 +69,13 @@
             $container.find('div[node-id='+id+'] .DepsName').replaceWith(inputElement);
             var commitChange = function () {
 
-                var html = '<div class="DepsName">';
+                    var html = '<div class="DepsName">';
 
-                for (var i = 0; i < nodes[id].data.name.length; i++) {
-                    console.log(nodes[id].data.name.charAt(i));
-                    html += nodes[id].data.name.charAt(i) + '</br>';
-                }
-                html += '</div>';
+                    for (var i = 0; i < nodes[id].data.name.length; i++) {
+                        console.log(nodes[id].data.name.charAt(i));
+                        html += nodes[id].data.name.charAt(i) + (id != '1' ? '</br >' : '') ;
+                    }
+                    html += '</div>';
 
                 //var h2Element = $('<h2>' + nodes[id].data.name + '</h2>');
                 var h2Element = $(html);
@@ -106,7 +106,10 @@
                 nextId++;
             }
 
-            self.addNode({id: nextId, name: '', parent: parentId});
+            var parentlevel = parseInt($("div [node-id=" + parentId+"]").attr("node-level"));
+
+
+            self.addNode({ id: nextId, name: '', parent: parentId, level: parentlevel+1 });
         }
 
         this.addNode = function(data){
@@ -242,7 +245,7 @@
             else{
                 buttonsHtml = '';
             }
-            return "<div class='node' node-id='"+this.data.id+"'>"+nameString+descString+buttonsHtml+"</div>";
+            return "<div class='node' node-id='" + this.data.id + "' node-level='" + this.data.level +"'>"+nameString+descString+buttonsHtml+"</div>";
         }
     }
 

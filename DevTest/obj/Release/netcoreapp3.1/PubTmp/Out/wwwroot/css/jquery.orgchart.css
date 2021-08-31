@@ -188,29 +188,36 @@ div.orgChart {
         padding: 0px 2px;
     }
 
-    div.orgChart div.node {
-        cursor: default;
-        /*text-orientation: upright;
+/*div.DepsName {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}*/
+
+div.orgChart div.node {
+    cursor: default;
+    /*text-orientation: upright;
         writing-mode: vertical-rl;
         border: 1px solid #e7e7e7;*/
-        display: inline-block;
-        padding: 3px;
-        width: 32px;
-        height: auto;
-        background: #ffffff; /* Old browsers */
-        background: -moz-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* IE10+ */
-        background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%); /* W3C */
-        line-height: 1.3em;
-        border-radius: 4px;
-        -moz-border-radius: 4px;
-        -webkit-border-radius: 4px;
-        position: relative;
-        /*box-shadow: 1px 1px 0px #ddd;*/
-    }
+    display: inline-block;
+    padding: 3px;
+    width: 32px;
+    height:auto;
+    /*height: 203px;*/
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(100%, #fbfbfb)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 0%, #fbfbfb 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 0%, #fbfbfb 100%); /* W3C */
+    line-height: 1.3em;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    position: relative;
+    /*box-shadow: 1px 1px 0px #ddd;*/
+}
 
 .org-add-button,
 .org-del-button,
